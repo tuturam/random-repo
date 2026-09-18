@@ -22,7 +22,7 @@ export function cn(...inputs: ClassValue[]) {
 
 export const dataLanguage = async () => {
   try {
-    const response = await fetch("languages.json")
+    const response = await fetch("./languages.json")
     const data = await response.json()
     return data
   } catch (error) {
