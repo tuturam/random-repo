@@ -1,5 +1,6 @@
 import { clsx, type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
+import languagesData from "./languages.json"
 
 export type languagesType = {
   title: string
@@ -20,10 +21,9 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
-export const dataLanguage = async () => {
+export const dataLanguage = () => {
   try {
-    const response = await fetch("./languages.json")
-    const data = await response.json()
+    const data = languagesData
     return data
   } catch (error) {
     console.log(error)
