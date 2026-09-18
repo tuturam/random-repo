@@ -22,10 +22,5 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export const dataLanguage = () => {
-  try {
-    const data = languagesData
-    return data
-  } catch (error) {
-    console.log(error)
-  }
+  return languagesData
 }

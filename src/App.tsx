@@ -35,7 +35,7 @@ function App() {
     setLoadingState({ ...loadingState, loadDataSelect: true })
     setStateText('Loading languages...')
     try {
-      const data: languagesType = await dataLanguage()
+      const data: languagesType = dataLanguage()
       const filteredData = data.filter((language) => language.value !== "")
       setLanguages(filteredData)
     } catch (error) {
@@ -227,9 +227,9 @@ function App() {
             Click to retry
           </Button>
         )}
-        <Switch 
-          checked={theme === 'dark'} 
-          onCheckedChange={() => setTheme(theme === 'dark' ? 'light' : 'dark')} 
+        <Switch
+          checked={theme === 'dark'}
+          onCheckedChange={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
         />
       </div>
       <Toaster />
